@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gerencia_de_estado/components/components.dart';
+import 'package:gerencia_de_estado/infra/navigation/navigation.dart';
+import 'package:gerencia_de_estado/main.dart';
 import 'package:gerencia_de_estado/src/controller.dart';
 import 'package:get/get.dart';
 
@@ -62,9 +64,8 @@ class LoginPage extends StatelessWidget {
             init: LoginController(),
             builder: (_) => RaisedButton(
               child: Text('Entrar'),
-              onPressed: () {
-                _.logIn();
-              },
+              onPressed: () =>
+                  Get.toNamed(Routes.HOME, arguments: 'Sou um argumento massa'),
             ),
           ),
         ],

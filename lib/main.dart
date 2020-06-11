@@ -24,7 +24,7 @@ class MainPage extends StatelessWidget {
       future: Routes.initialRoute,
       builder: (_, snapshot) => GetMaterialApp(
         title: 'GetDemo',
-        initialRoute: snapshot.data ?? Routes.LOGIN,
+        initialRoute: Routes.LOGIN,
         namedRoutes: Nav.routes,
         supportedLocales: [
           const Locale('pt', ''),
@@ -84,6 +84,7 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(Get.arguments);
     return Scaffold(
       appBar: AppBar(
         title: Text('GetDemo'),
